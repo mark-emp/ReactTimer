@@ -23,7 +23,7 @@ describe('CountDownForm', () => {
     expect(spy).toHaveBeenCalledWith(109);
   });
 
-  it('should not call onSetCountdown if not valid seconds entered', () => {
+  it('should not call onSetCountdown if invalid seconds entered', () => {
     var spy = expect.createSpy();
     var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>)
     var $el = $(ReactDOM.findDOMNode(countdownForm));
